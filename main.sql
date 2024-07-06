@@ -1,3 +1,46 @@
+-- CREATE TABLE Titles (
+--     Title_ID VARCHAR(30) PRIMARY KEY NOT NULL,
+--     Title VARCHAR(30) NOT NULL
+-- );
+
+-- CREATE TABLE Departments (
+--     Dept_number VARCHAR(10) PRIMARY KEY NOT NULL,
+--     Dept_name VARCHAR(30) NOT NULL
+-- );
+
+-- CREATE TABLE Employees (
+--     Employee_number INT PRIMARY KEY NOT NULL,
+--     Employee_titleID VARCHAR(30) NOT NULL,
+--     Birth_date DATE NOT NULL,
+--     First_name VARCHAR(30) NOT NULL,
+--     Last_name VARCHAR(30) NOT NULL,
+--     Sex VARCHAR(20) NOT NULL,
+--     Hire_date DATE NOT NULL,
+--     FOREIGN KEY (Employee_titleID) REFERENCES Titles(Title_ID)
+-- );
+
+-- CREATE TABLE Dept_employees (
+--     Employee_number INT NOT NULL,
+--     Dept_number VARCHAR(10) NOT NULL,
+--     PRIMARY KEY (Employee_number, dept_number),
+--     FOREIGN KEY (Dept_number) REFERENCES Departments(Dept_number),
+--     FOREIGN KEY (Employee_number) REFERENCES Employees(Employee_number)
+-- );
+
+-- CREATE TABLE Salary (
+--     Employee_number INT PRIMARY KEY NOT NULL,
+--     Salary INT NOT NULL,
+--     FOREIGN KEY (Employee_number) REFERENCES Dept_employees(Employee_number)
+-- );
+
+-- CREATE TABLE Dept_manager (
+--     Dept_number VARCHAR(10) NOT NULL,
+--     Employee_number INT NOT NULL,
+--     PRIMARY KEY (Dept_number, Employee_number),
+--     FOREIGN KEY (Dept_number) REFERENCES Departments(Dept_number),
+--     FOREIGN KEY (Employee_number) REFERENCES Dept_employees(Employee_number)
+-- );
+
 -- QUESTION ONE \/\/\/\/ :)
 
 -- "List the employee number, last name, first name, sex, and salary of each employee."
